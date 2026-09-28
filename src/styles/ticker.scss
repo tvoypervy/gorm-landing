@@ -1,0 +1,33 @@
+.ticker {
+  width: 100%;
+  background-color: #d12626;
+  overflow: hidden;
+  display: flex;
+  padding: 24px 0;
+  white-space: nowrap;
+
+  &__track {
+    display: flex;
+    /* Час (20s) можна зменшити/збільшити для зміни швидкості */
+    animation: scrollTicker 20s linear infinite; 
+  }
+
+  &__text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-right: 20px;
+  }
+}
+
+@keyframes scrollTicker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
